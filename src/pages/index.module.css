@@ -1,0 +1,123 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 2.5rem auto 0;
+  max-width: 760px;
+  width: 100%;
+}
+
+.searchTitle {
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.searchHint {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.searchContainer :global(.dsla-search-wrapper),
+.searchContainer :global(.dsla-search-field),
+.searchContainer :global(.aa-Autocomplete) {
+  width: 100%;
+}
+
+.searchContainer :global(.aa-Autocomplete) {
+  --aa-search-input-height: 3.75rem;
+}
+
+.searchContainer :global(.aa-Form),
+.searchContainer :global(.aa-DetachedSearchButton) {
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 16px 40px rgba(21, 41, 65, 0.22);
+  color: #152941;
+  min-height: 3.75rem;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.searchContainer :global(.aa-Form:focus-within),
+.searchContainer :global(.aa-DetachedSearchButton:focus) {
+  border-color: #7fb3e6;
+  box-shadow:
+    0 0 0 4px rgba(127, 179, 230, 0.32),
+    0 18px 44px rgba(21, 41, 65, 0.25);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.searchContainer :global(.aa-Input),
+.searchContainer :global(.aa-DetachedSearchButton) {
+  font-size: 1.05rem;
+}
+
+.searchContainer :global(.aa-Input::placeholder),
+.searchContainer :global(.aa-DetachedSearchButtonPlaceholder) {
+  color: #496785;
+  opacity: 1;
+}
+
+.searchContainer :global(.aa-Label svg),
+.searchContainer :global(.aa-DetachedSearchButtonIcon) {
+  color: #1f3a5f;
+}
+
+@media screen and (max-width: 996px) {
+  .searchContainer {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .searchContainer {
+    gap: 0.65rem;
+  }
+
+  .searchContainer :global(.aa-Autocomplete) {
+    --aa-search-input-height: 3.25rem;
+  }
+
+  .searchContainer :global(.aa-Form),
+  .searchContainer :global(.aa-DetachedSearchButton) {
+    min-height: 3.25rem;
+  }
+
+  .searchHint {
+    font-size: 0.88rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
