@@ -7,7 +7,7 @@
   padding: 4rem 0;
   text-align: center;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 @media screen and (max-width: 996px) {
@@ -42,31 +42,28 @@
 }
 
 .searchContainer :global(.dsla-search-wrapper),
-.searchContainer :global(.dsla-search-field),
-.searchContainer :global(.aa-Autocomplete) {
+.searchContainer :global(.inline-search) {
   width: 100%;
 }
 
-.searchContainer :global(.aa-Autocomplete) {
-  --aa-search-input-height: 3.75rem;
+.searchContainer :global(.inline-search__form) {
+  --aa-search-input-height: 2.85rem;
 }
 
-.searchContainer :global(.aa-Form),
-.searchContainer :global(.aa-DetachedSearchButton) {
+.searchContainer :global(.aa-Form) {
   background: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 8px;
   box-shadow: 0 16px 40px rgba(21, 41, 65, 0.22);
   color: #152941;
-  min-height: 3.75rem;
+  min-height: 2.85rem;
   transition:
     border-color 160ms ease,
     box-shadow 160ms ease,
     transform 160ms ease;
 }
 
-.searchContainer :global(.aa-Form:focus-within),
-.searchContainer :global(.aa-DetachedSearchButton:focus) {
+.searchContainer :global(.aa-Form:focus-within) {
   border-color: #7fb3e6;
   box-shadow:
     0 0 0 4px rgba(127, 179, 230, 0.32),
@@ -75,19 +72,16 @@
   transform: translateY(-1px);
 }
 
-.searchContainer :global(.aa-Input),
-.searchContainer :global(.aa-DetachedSearchButton) {
-  font-size: 1.05rem;
+.searchContainer :global(.aa-Input) {
+  font-size: 1rem;
 }
 
-.searchContainer :global(.aa-Input::placeholder),
-.searchContainer :global(.aa-DetachedSearchButtonPlaceholder) {
+.searchContainer :global(.aa-Input::placeholder) {
   color: #496785;
   opacity: 1;
 }
 
-.searchContainer :global(.aa-Label svg),
-.searchContainer :global(.aa-DetachedSearchButtonIcon) {
+.searchContainer :global(.inline-search__submit) {
   color: #1f3a5f;
 }
 
@@ -102,13 +96,12 @@
     gap: 0.65rem;
   }
 
-  .searchContainer :global(.aa-Autocomplete) {
-    --aa-search-input-height: 3.25rem;
+  .searchContainer :global(.inline-search__form) {
+    --aa-search-input-height: 2.7rem;
   }
 
-  .searchContainer :global(.aa-Form),
-  .searchContainer :global(.aa-DetachedSearchButton) {
-    min-height: 3.25rem;
+  .searchContainer :global(.aa-Form) {
+    min-height: 2.7rem;
   }
 
   .searchHint {
