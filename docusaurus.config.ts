@@ -15,7 +15,7 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://antitrust-wiki.pages.dev',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -103,6 +103,7 @@ const config: Config = {
           label: 'Economics',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/resources', label: 'Resources', position: 'left'},
       ],
     },
     footer: {
