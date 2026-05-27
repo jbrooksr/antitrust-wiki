@@ -12,7 +12,7 @@ const sidebarLinks = [
 
 export default function Resources(): ReactNode {
   return (
-    <ResourcesPage sidebarLinks={sidebarLinks}>
+    <ResourcesPage activeView="introductory" sidebarLinks={sidebarLinks}>
       <ResourcesContent />
     </ResourcesPage>
   );

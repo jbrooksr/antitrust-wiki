@@ -1,13 +1,49 @@
 .resourcesHero {
-  padding: 3.5rem 0;
+  padding: 1.75rem 0 1.35rem;
   text-align: center;
 }
 
-.subtitle {
-  color: rgba(255, 255, 255, 0.86);
-  font-size: 1.08rem;
-  margin: 0.75rem auto 0;
-  max-width: 680px;
+.viewSwitchBand {
+  background: var(--ifm-background-surface-color);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding: 0.68rem 0;
+}
+
+.viewSwitch {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.viewSwitchLink {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 999px;
+  color: var(--ifm-color-emphasis-800);
+  font-weight: 700;
+  min-width: 11rem;
+  padding: 0.42rem 1.35rem;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+}
+
+.viewSwitchLink:hover,
+.viewSwitchLink:focus-visible {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  outline: 0;
+  text-decoration: none;
+}
+
+.viewSwitchLinkActive,
+.viewSwitchLinkActive:hover,
+.viewSwitchLinkActive:focus-visible {
+  background: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: #ffffff;
 }
 
 .resourcesMain {
@@ -76,6 +112,12 @@
   scroll-margin-top: calc(var(--ifm-navbar-height) + 1rem);
 }
 
+.content > h2:first-child {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
+
 .content > p:first-child + h2 {
   border-top: 0;
   margin-top: 0;
@@ -129,7 +171,16 @@
 
 @media screen and (max-width: 640px) {
   .resourcesHero {
-    padding: 2.5rem 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .viewSwitch {
+    padding: 0 1rem;
+  }
+
+  .viewSwitchLink {
+    min-width: 0;
+    flex: 1;
   }
 
   .resourcesMain {

@@ -1,5 +1,6 @@
 import type {ReactNode} from 'react';
 import clsx from 'clsx';
+import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 
@@ -11,11 +12,13 @@ type SidebarLink = {
 };
 
 type ResourcesPageProps = {
+  activeView: 'introductory' | 'technical';
   children: ReactNode;
   sidebarLinks: SidebarLink[];
 };
 
 export default function ResourcesPage({
+  activeView,
   children,
   sidebarLinks,
 }: ResourcesPageProps): ReactNode {
@@ -28,12 +31,30 @@ export default function ResourcesPage({
           <Heading as="h1" className="hero__title">
             Resources
           </Heading>
-          <p className={styles.subtitle}>
-            A focused starting point for antitrust commentary, research, and
-            longer-form references.
-          </p>
         </div>
       </header>
+      <div className={styles.viewSwitchBand}>
+        <nav className={styles.viewSwitch} aria-label="Resource view">
+          <Link
+            className={clsx(
+              styles.viewSwitchLink,
+              activeView === 'introductory' && styles.viewSwitchLinkActive,
+            )}
+            to="/resources"
+            aria-current={activeView === 'introductory' ? 'page' : undefined}>
+            Introductory
+          </Link>
+          <Link
+            className={clsx(
+              styles.viewSwitchLink,
+              activeView === 'technical' && styles.viewSwitchLinkActive,
+            )}
+            to="/resources/technical"
+            aria-current={activeView === 'technical' ? 'page' : undefined}>
+            Technical
+          </Link>
+        </nav>
+      </div>
       <main className={styles.resourcesMain}>
         <div className={clsx('container', styles.resourcesLayout)}>
           <aside className={styles.sidebar} aria-label="Resources sections">

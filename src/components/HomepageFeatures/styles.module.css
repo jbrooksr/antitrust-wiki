@@ -5,6 +5,16 @@
   width: 100%;
 }
 
+.featureGrid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.featureItem {
+  min-width: 0;
+}
+
 .featureLink {
   align-items: center;
   border-radius: 8px;
@@ -57,7 +67,17 @@
     padding: 2rem 0;
   }
 
+  .featureGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .featureLink {
     margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .featureGrid {
+    grid-template-columns: 1fr;
   }
 }

@@ -1,19 +1,19 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+analysis:
+  label: Analysis
+  permalink: /analysis
+  description: Longer-form analytical posts.
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+commentary:
+  label: Commentary
+  permalink: /commentary
+  description: Commentary and reactions.
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+notes:
+  label: Notes
+  permalink: /notes
+  description: Short notes and reading pointers.
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+updates:
+  label: Updates
+  permalink: /updates
+  description: Site updates and general announcements.

@@ -1,5 +1,4 @@
 import type {ReactNode} from 'react';
-import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
@@ -25,6 +24,11 @@ const FeatureList: FeatureItem[] = [
     title: 'Blog',
     href: '/blog',
     Icon: PaperIcon,
+  },
+  {
+    title: 'Resources',
+    href: '/resources',
+    Icon: BookshelfIcon,
   },
 ];
 
@@ -74,9 +78,30 @@ function PaperIcon(props: React.ComponentProps<'svg'>) {
   );
 }
 
+function BookshelfIcon(props: React.ComponentProps<'svg'>) {
+  return (
+    <svg viewBox="0 0 160 160" aria-hidden="true" {...props}>
+      <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M32 126h96" />
+        <path d="M40 34h18v92H40z" />
+        <path d="M58 34h18v92H58z" />
+        <path d="M78 42h18v84H78z" />
+        <path d="M98 38l16-4 22 86-16 4z" />
+        <path d="M46 52h6" />
+        <path d="M64 58h6" />
+        <path d="M84 64h6" />
+        <path d="M45 108h8" />
+        <path d="M63 108h8" />
+        <path d="M83 108h8" />
+        <path d="M118 104l8-2" />
+      </g>
+    </svg>
+  );
+}
+
 function Feature({title, href, Icon}: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={styles.featureItem}>
       <Link className={styles.featureLink} to={href} aria-label={`Go to ${title}`}>
         <span className={styles.iconFrame}>
           <Icon className={styles.featureIcon} />
@@ -91,7 +116,7 @@ export default function HomepageFeatures(): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className={styles.featureGrid}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}

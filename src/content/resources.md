@@ -1,5 +1,3 @@
-Use the sidebar to jump between sections. Each section is kept as a plain Markdown list so it is easy to add, remove, or reorganize sources as the site grows.
-
 ## Blogs
 
 Short-form commentary and ongoing analysis for tracking antitrust developments.
@@ -48,6 +46,8 @@ Periodicals and publications for more developed antitrust analysis.
   Academic work on competition law, industrial organization, and economics.
 - [Concurrences](https://www.concurrences.com/)  
   Competition law journal materials, news, events, and comparative analysis.
+- [Applied Antitrust Law](https://appliedantitrust.com)  
+  Survey course on applied antitrust law from Georgetown.
 
 ## Academic Texts
 
@@ -67,12 +67,18 @@ Research hubs and reference materials useful for deeper antitrust study.
 Treatises and book-length references that are useful anchors for antitrust
 doctrine and policy.
 
-- [Antitrust Law: An Analysis of Antitrust Principles and Their Application](https://lrus.wolterskluwer.com/store/product/antitrust-law-an-analysis-of-antitrust-principles-and-their-application/)  
-  Areeda and Hovenkamp treatise commonly used for U.S. antitrust doctrine.
-- [The Antitrust Paradox](https://www.simonandschuster.com/books/The-Antitrust-Paradox/Robert-H-Bork/9780684844568)  
-  Robert Bork text associated with consumer-welfare-centered antitrust analysis.
-- [Competition Policy: Theory and Practice](https://www.cambridge.org/core/books/competition-policy/63D0C1114F53E70285E36B2D9526821F)  
-  Massimo Motta book on competition economics and competition policy tools.
-- [How Big-Tech Barons Smash Innovation](https://global.oup.com/academic/product/how-big-tech-barons-smash-innovation-9780197646406)  
-  A modern antitrust-focused book on dominant technology platforms and
-  innovation.
+- *The Curse of Bigness: Antitrust in the New Gilded Age*, Tim Wu
+- *Goliath: The 100-Year War Between Monopoly Power and Democracy*, Matt Stoller
+- *Monopolized: Life in the Age of Corporate Power*, David Dayen
+- *The Myth of Capitalism: Monopolise and the Death of Capitalism*, Jonathan Tepper
+- *The Deal of the Century: The Breakup of AT&T*, Steve Coll
+- *The Profit Paradox*, Jan Eeckhout
+- *The Great Reversal: How America Gave up on Free Markets*, Thomas Philippon
+- *How Antitrust Failed Workers*, Eric Posner
+- *Competition is Killing Us: How Big Business is Harming our Society and Planet - And What To Do About It*, Michelle Meagher
+- *The Antitrust Paradigm: Restoring a Competitive Economy*, Jonathan Baker
+- *Break 'Em Up: Recovering Our Freedom from Big Ag, Big Tech, and Big Money*, Zephyr Teachout
+
+
+
+
