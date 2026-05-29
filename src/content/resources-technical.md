@@ -1,5 +1,3 @@
-Technical resources are aimed at readers who want denser legal materials, empirical tools, policy documents, and research pipelines for antitrust analysis.
-
 ## Agency Guidance and Policy
 
 Primary materials and policy documents for understanding how agencies frame enforcement analysis.
@@ -14,6 +12,34 @@ Primary materials and policy documents for understanding how agencies frame enfo
   EU antitrust, merger, state aid, and digital markets materials.
 - [OECD Competition](https://www.oecd.org/en/topics/competition.html)  
   Roundtables, recommendations, and technical competition policy resources.
+
+## Academic Texts
+
+Research hubs and reference materials useful for deeper antitrust study.
+
+- [SSRN Antitrust & Competition Law eJournal](https://www.ssrn.com/index.cfm/en/antitrust-competition-law/)  
+  Working papers and recent scholarship in antitrust and competition law.
+- [OECD Competition](https://www.oecd.org/en/topics/competition.html)  
+  Competition policy roundtables, recommendations, toolkits, and research.
+- [DOJ and FTC Merger Guidelines](https://www.justice.gov/atr/merger-guidelines)  
+  Agency guidance on merger analysis and enforcement frameworks.
+- [International Competition Network](https://www.internationalcompetitionnetwork.org/)  
+  Global competition agency materials and best-practice documents.
+
+## Journals
+
+Periodicals and publications for more developed antitrust analysis.
+
+- [Antitrust Law Journal](https://www.americanbar.org/groups/antitrust_law/resources/journal/)  
+  Scholarly articles published by the ABA Antitrust Law Section.
+- [Antitrust Source](https://www.americanbar.org/groups/antitrust_law/resources/source/)  
+  Practice-oriented articles on antitrust, consumer protection, and privacy.
+- [Journal of Competition Law & Economics](https://academic.oup.com/jcle)  
+  Academic work on competition law, industrial organization, and economics.
+- [Concurrences](https://www.concurrences.com/)  
+  Competition law journal materials, news, events, and comparative analysis.
+- [Applied Antitrust Law](https://appliedantitrust.com)  
+  Survey course on applied antitrust law from Georgetown.
 
 ## Economic Methods
 

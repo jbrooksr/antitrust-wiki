@@ -3,10 +3,8 @@ import ResourcesPage from '@site/src/components/ResourcesPage';
 import ResourcesContent from '@site/src/content/resources.md';
 
 const sidebarLinks = [
-  {id: 'blogs', label: 'Blogs'},
+  {id: 'blogs-and-news', label: 'Blogs and News'},
   {id: 'podcasts', label: 'Podcasts'},
-  {id: 'journals', label: 'Journals'},
-  {id: 'academic-texts', label: 'Academic Texts'},
   {id: 'books', label: 'Books'},
 ];
 

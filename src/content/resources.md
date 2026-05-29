@@ -1,4 +1,4 @@
-## Blogs
+## Blogs and News
 
 Short-form commentary and ongoing analysis for tracking antitrust developments.
 
@@ -33,51 +33,26 @@ Audio sources for interviews, enforcement updates, and competition policy discus
 - [Our Curious Amalgam](https://open.spotify.com/show/1XqJvsoB11JTdSXUnI5t8h?si=86121089ea374377): American Bar Association
 - [Slingshot](https://open.spotify.com/show/5V877zUew6QmWYJmf7BN1W?si=db10a56e74964231): The Sling
 
-
-## Journals
-
-Periodicals and publications for more developed antitrust analysis.
-
-- [Antitrust Law Journal](https://www.americanbar.org/groups/antitrust_law/resources/journal/)  
-  Scholarly articles published by the ABA Antitrust Law Section.
-- [Antitrust Source](https://www.americanbar.org/groups/antitrust_law/resources/source/)  
-  Practice-oriented articles on antitrust, consumer protection, and privacy.
-- [Journal of Competition Law & Economics](https://academic.oup.com/jcle)  
-  Academic work on competition law, industrial organization, and economics.
-- [Concurrences](https://www.concurrences.com/)  
-  Competition law journal materials, news, events, and comparative analysis.
-- [Applied Antitrust Law](https://appliedantitrust.com)  
-  Survey course on applied antitrust law from Georgetown.
-
-## Academic Texts
-
-Research hubs and reference materials useful for deeper antitrust study.
-
-- [SSRN Antitrust & Competition Law eJournal](https://www.ssrn.com/index.cfm/en/antitrust-competition-law/)  
-  Working papers and recent scholarship in antitrust and competition law.
-- [OECD Competition](https://www.oecd.org/en/topics/competition.html)  
-  Competition policy roundtables, recommendations, toolkits, and research.
-- [DOJ and FTC Merger Guidelines](https://www.justice.gov/atr/merger-guidelines)  
-  Agency guidance on merger analysis and enforcement frameworks.
-- [International Competition Network](https://www.internationalcompetitionnetwork.org/)  
-  Global competition agency materials and best-practice documents.
-
 ## Books
 
 Treatises and book-length references that are useful anchors for antitrust
 doctrine and policy.
 
-- *The Curse of Bigness: Antitrust in the New Gilded Age*, Tim Wu
-- *Goliath: The 100-Year War Between Monopoly Power and Democracy*, Matt Stoller
-- *Monopolized: Life in the Age of Corporate Power*, David Dayen
-- *The Myth of Capitalism: Monopolise and the Death of Capitalism*, Jonathan Tepper
-- *The Deal of the Century: The Breakup of AT&T*, Steve Coll
-- *The Profit Paradox*, Jan Eeckhout
-- *The Great Reversal: How America Gave up on Free Markets*, Thomas Philippon
-- *How Antitrust Failed Workers*, Eric Posner
-- *Competition is Killing Us: How Big Business is Harming our Society and Planet - And What To Do About It*, Michelle Meagher
-- *The Antitrust Paradigm: Restoring a Competitive Economy*, Jonathan Baker
-- *Break 'Em Up: Recovering Our Freedom from Big Ag, Big Tech, and Big Money*, Zephyr Teachout
+- [*The Curse of Bigness: Antitrust in the New Gilded Age*](https://www.goodreads.com/en/book/show/40081165-the-curse-of-bigness), Tim Wu
+- [*Goliath: The 100-Year War Between Monopoly Power and Democracy*](https://www.goodreads.com/book/show/40538538-goliath), Matt Stoller
+- [*Monopolized: Life in the Age of Corporate Power*](https://www.goodreads.com/en/book/show/53927066-monopolized), David Dayen
+- [*The Myth of Capitalism: Monopolies and the Death of Capitalism*](https://www.goodreads.com/en/book/show/40751646-the-myth-of-capitalism), Jonathan Tepper
+- [*The Deal of the Century: The Breakup of AT&T*](https://www.goodreads.com/en/book/show/199958.The_Deal_of_the_Century), Steve Coll
+- [*The Profit Paradox: How Thriving Firms Threaten the Future of Work*](https://www.goodreads.com/en/book/show/55873420-the-profit-paradox), Jan Eeckhout
+- [*The Great Reversal: How America Gave up on Free Markets*](https://www.goodreads.com/book/show/44326237-the-great-reversal), Thomas Philippon
+- [*How Antitrust Failed Workers*](https://www.goodreads.com/en/book/show/55332371-how-antitrust-failed-workers), Eric Posner
+- [*Competition is Killing Us: How Big Business is Harming our Society and Planet - And What To Do About It*](https://www.goodreads.com/book/show/52842951-competition-is-killing-us), Michelle Meagher
+- [*The Antitrust Paradigm: Restoring a Competitive Economy*](https://www.goodreads.com/en/book/show/42449467-the-antitrust-paradigm), Jonathan Baker
+- [*Break 'Em Up: Recovering Our Freedom from Big Ag, Big Tech, and Big Money*](https://www.goodreads.com/en/book/show/51176626-break-em-up), Zephyr Teachout
+- [*The Antitrust Paradox: A Policy at War with Itself*](https://www.goodreads.com/en/book/show/658355.Antitrust_Paradox), Robert Bork
+- [*The Master Switch: The Rise and Fall of Information Empires*](https://www.goodreads.com/book/show/8201080-the-master-switch), Tim Wu
+- [*Tech Monopoly*](https://www.goodreads.com/book/show/201632573-tech-monopoly), Herbert Hovenkamp
+- [*Antimonopoly and American Democracy*](https://www.goodreads.com/book/show/148028467-antimonopoly-and-american-democracy), Daniel Crane
 
 
 
