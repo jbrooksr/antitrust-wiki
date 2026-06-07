@@ -22,6 +22,7 @@
   --antitrust-table-sticky-top: var(--ifm-navbar-height);
   --antitrust-table-sticky-header-height: 0px;
   --antitrust-table-sticky-subheader-height: auto;
+  --antitrust-page-scroll-width: 100%;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -221,6 +222,30 @@
 }
 
 @media screen and (max-width: 996px) {
+  .navbar {
+    background-color: transparent;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .navbar::before {
+    background-color: var(--ifm-navbar-background-color);
+    bottom: 0;
+    box-shadow: var(--ifm-navbar-shadow);
+    content: '';
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: var(--antitrust-page-scroll-width);
+    z-index: 0;
+  }
+
+  .navbar__inner {
+    position: relative;
+    z-index: 1;
+  }
+
   .navbar .dsla-search-wrapper,
   .navbar .inline-search {
     width: 100%;

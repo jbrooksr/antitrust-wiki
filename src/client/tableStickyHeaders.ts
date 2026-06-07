@@ -1,4 +1,15 @@
-function updateTableHeaderOffsets() {
+function getTableScrollWidth() {
+  const tables = document.querySelectorAll<HTMLTableElement>('.markdown table');
+  const tableWidths = Array.from(tables, (table) => {
+    const tableLeft = table.getBoundingClientRect().left + window.scrollX;
+
+    return Math.ceil(tableLeft + table.scrollWidth);
+  });
+
+  return Math.max(window.innerWidth, ...tableWidths);
+}
+
+function updateStickyTableLayout() {
   document.querySelectorAll<HTMLTableElement>('.markdown table').forEach((table) => {
     const header = table.querySelector<HTMLTableSectionElement>('thead');
     const subheaders = table.querySelectorAll<HTMLTableCellElement>(
@@ -26,10 +37,15 @@ function updateTableHeaderOffsets() {
       `${subheaderHeight}px`,
     );
   });
+
+  document.documentElement.style.setProperty(
+    '--antitrust-page-scroll-width',
+    `${getTableScrollWidth()}px`,
+  );
 }
 
-function scheduleTableHeaderOffsetUpdate() {
-  requestAnimationFrame(updateTableHeaderOffsets);
+function scheduleStickyTableLayoutUpdate() {
+  requestAnimationFrame(updateStickyTableLayout);
 }
 
 function observeTableHeaders() {
@@ -37,7 +53,7 @@ function observeTableHeaders() {
     return undefined;
   }
 
-  const observer = new ResizeObserver(scheduleTableHeaderOffsetUpdate);
+  const observer = new ResizeObserver(scheduleStickyTableLayoutUpdate);
 
   document
     .querySelectorAll<HTMLElement>('.markdown table thead, .markdown table tbody tr > td[colspan]')
@@ -49,13 +65,13 @@ function observeTableHeaders() {
 function setupTableStickyHeaders() {
   const observer = observeTableHeaders();
 
-  scheduleTableHeaderOffsetUpdate();
-  window.addEventListener('resize', scheduleTableHeaderOffsetUpdate);
-  document.fonts?.ready.then(scheduleTableHeaderOffsetUpdate).catch(() => {});
+  scheduleStickyTableLayoutUpdate();
+  window.addEventListener('resize', scheduleStickyTableLayoutUpdate);
+  document.fonts?.ready.then(scheduleStickyTableLayoutUpdate).catch(() => {});
 
   return () => {
     observer?.disconnect();
-    window.removeEventListener('resize', scheduleTableHeaderOffsetUpdate);
+    window.removeEventListener('resize', scheduleStickyTableLayoutUpdate);
   };
 }
 
