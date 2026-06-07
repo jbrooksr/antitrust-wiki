@@ -34,10 +34,53 @@ const FALLBACK_DOCUMENTS: SearchDocument[] = [
     sectionRoute: '/blog',
     type: 'blog',
   },
+  {
+    pageTitle: 'Resources',
+    sectionTitle: 'Resources',
+    sectionRoute: '/resources',
+    type: 'page',
+  },
+];
+
+const SUGGESTED_DOCUMENTS: SearchDocument[] = [
+  {
+    pageTitle: 'Overview',
+    sectionTitle: 'Law Overview',
+    sectionRoute: '/docs/antitrust/law/overview',
+    type: 'docs',
+  },
+  {
+    pageTitle: 'Economics',
+    sectionTitle: 'Economics',
+    sectionRoute: '/docs/antitrust/economics/test',
+    type: 'docs',
+  },
+  {
+    pageTitle: 'Resources',
+    sectionTitle: 'Resources',
+    sectionRoute: '/resources',
+    type: 'page',
+  },
 ];
 
 function normalizeText(value: string): string {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+}
+
+function getPageRoute(route: string): string {
+  return route.split('#')[0];
+}
+
+function toPageDocument(document: SearchDocument): SearchDocument {
+  const pageRoute = getPageRoute(document.sectionRoute);
+  const title = document.pageTitle || document.sectionTitle;
+
+  return {
+    ...document,
+    pageTitle: title,
+    sectionTitle: title,
+    sectionRoute: pageRoute,
+  };
 }
 
 function scoreDocument(document: SearchDocument, query: string): number {
@@ -78,14 +121,16 @@ function scoreDocument(document: SearchDocument, query: string): number {
 function dedupeDocuments(documents: SearchDocument[]): SearchDocument[] {
   const seen = new Set<string>();
 
-  return documents.filter((document) => {
-    const key = `${document.sectionRoute}|${document.sectionTitle}`;
+  return documents.flatMap((document) => {
+    const pageDocument = toPageDocument(document);
+    const key = pageDocument.sectionRoute;
+
     if (seen.has(key)) {
-      return false;
+      return [];
     }
 
     seen.add(key);
-    return true;
+    return [pageDocument];
   });
 }
 
@@ -110,6 +155,24 @@ async function fetchDocuments(baseUrl: string, tags: string[]): Promise<SearchDo
   return dedupeDocuments([...indexes.flat(), ...FALLBACK_DOCUMENTS]);
 }
 
+function getSuggestedDocuments(documents: SearchDocument[]): SearchDocument[] {
+  const documentsByRoute = new Map(
+    documents.map((document) => [getPageRoute(document.sectionRoute), document]),
+  );
+
+  return SUGGESTED_DOCUMENTS.map((suggestion) => {
+    const indexedDocument = documentsByRoute.get(getPageRoute(suggestion.sectionRoute));
+
+    return {
+      ...suggestion,
+      ...indexedDocument,
+      sectionTitle: suggestion.sectionTitle,
+      pageTitle: suggestion.pageTitle,
+      sectionRoute: getPageRoute(suggestion.sectionRoute),
+    };
+  });
+}
+
 export default function HomepageSearch(): React.ReactElement {
   const {
     siteConfig: {baseUrl},
@@ -120,6 +183,7 @@ export default function HomepageSearch(): React.ReactElement {
   const [documents, setDocuments] = useState<SearchDocument[]>(FALLBACK_DOCUMENTS);
   const [query, setQuery] = useState('');
   const [isFocused, setIsFocused] = useState(false);
+  const trimmedQuery = query.trim();
 
   useEffect(() => {
     let isCurrent = true;
@@ -135,8 +199,14 @@ export default function HomepageSearch(): React.ReactElement {
     };
   }, [baseUrl, tagsKey]);
 
+  const suggestions = useMemo<SearchResult[]>(() => {
+    return getSuggestedDocuments(documents).map((document, index) => ({
+      ...document,
+      score: SUGGESTED_DOCUMENTS.length - index,
+    }));
+  }, [documents]);
+
   const results = useMemo<SearchResult[]>(() => {
-    const trimmedQuery = query.trim();
     if (!trimmedQuery) {
       return [];
     }
@@ -149,9 +219,10 @@ export default function HomepageSearch(): React.ReactElement {
       .filter((document) => document.score > 0)
       .sort((a, b) => b.score - a.score)
       .slice(0, 8);
-  }, [documents, query]);
+  }, [documents, trimmedQuery]);
 
-  const showPanel = isFocused && query.trim().length > 0;
+  const panelResults = trimmedQuery ? results : suggestions;
+  const showPanel = isFocused;
 
   return (
     <div
@@ -167,8 +238,8 @@ export default function HomepageSearch(): React.ReactElement {
         role="search"
         onSubmit={(event) => {
           event.preventDefault();
-          if (results[0]) {
-            window.location.assign(results[0].sectionRoute);
+          if (panelResults[0]) {
+            window.location.assign(panelResults[0].sectionRoute);
           }
         }}>
         <button
@@ -211,9 +282,9 @@ export default function HomepageSearch(): React.ReactElement {
       </form>
       {showPanel && (
         <div className="aa-Panel inline-search__panel" role="listbox">
-          {results.length > 0 ? (
+          {panelResults.length > 0 ? (
             <ul className="aa-List inline-search__list">
-              {results.map((result) => (
+              {panelResults.map((result) => (
                 <li
                   className="aa-Item"
                   key={`${result.sectionRoute}|${result.sectionTitle}`}
@@ -227,11 +298,6 @@ export default function HomepageSearch(): React.ReactElement {
                         <span className="aa-ItemContentTitle">
                           {result.sectionTitle}
                         </span>
-                        {result.pageTitle !== result.sectionTitle && (
-                          <span className="aa-ItemContentDescription">
-                            {result.pageTitle}
-                          </span>
-                        )}
                       </span>
                     </span>
                   </Link>

@@ -1,6 +1,9 @@
 function updateTableHeaderOffsets() {
   document.querySelectorAll<HTMLTableElement>('.markdown table').forEach((table) => {
     const header = table.querySelector<HTMLTableSectionElement>('thead');
+    const subheaders = table.querySelectorAll<HTMLTableCellElement>(
+      'tbody tr > td[colspan]',
+    );
 
     if (!header) {
       return;
@@ -9,6 +12,18 @@ function updateTableHeaderOffsets() {
     table.style.setProperty(
       '--antitrust-table-sticky-header-height',
       `${Math.ceil(header.getBoundingClientRect().height)}px`,
+    );
+
+    const subheaderHeight = Math.max(
+      0,
+      ...Array.from(subheaders, (subheader) =>
+        Math.ceil(subheader.getBoundingClientRect().height),
+      ),
+    );
+
+    table.style.setProperty(
+      '--antitrust-table-sticky-subheader-height',
+      `${subheaderHeight}px`,
     );
   });
 }
@@ -25,8 +40,8 @@ function observeTableHeaders() {
   const observer = new ResizeObserver(scheduleTableHeaderOffsetUpdate);
 
   document
-    .querySelectorAll<HTMLElement>('.markdown table thead')
-    .forEach((header) => observer.observe(header));
+    .querySelectorAll<HTMLElement>('.markdown table thead, .markdown table tbody tr > td[colspan]')
+    .forEach((stickyTableCell) => observer.observe(stickyTableCell));
 
   return observer;
 }

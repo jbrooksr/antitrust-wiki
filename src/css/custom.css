@@ -21,6 +21,7 @@
   --antitrust-table-text: var(--ifm-font-color-base);
   --antitrust-table-sticky-top: var(--ifm-navbar-height);
   --antitrust-table-sticky-header-height: 0px;
+  --antitrust-table-sticky-subheader-height: auto;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -135,7 +136,11 @@
 .inline-search__result .aa-ItemContentTitle,
 .inline-search__result .aa-ItemContentDescription {
   display: block;
+  min-width: 0;
+  overflow: hidden;
   text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .inline-search__result:hover,
@@ -219,5 +224,14 @@
   .navbar .dsla-search-wrapper,
   .navbar .inline-search {
     width: 100%;
+  }
+
+  .markdown table {
+    min-width: 100%;
+    width: max-content;
+  }
+
+  .markdown table tbody tr > td[colspan] {
+    height: var(--antitrust-table-sticky-subheader-height);
   }
 }
