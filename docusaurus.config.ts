@@ -37,6 +37,8 @@ const config: Config = {
     ],
   ],
 
+  clientModules: ['./src/client/tableStickyHeaders.ts'],
+
   onBrokenLinks: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -74,7 +76,8 @@ const config: Config = {
 
   themeConfig: {
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: 'light',
+      respectPrefersColorScheme: false,
     },
     navbar: {
       title: 'Antitrust Wiki',

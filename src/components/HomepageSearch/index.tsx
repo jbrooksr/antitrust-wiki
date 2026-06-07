@@ -19,7 +19,7 @@ const FALLBACK_DOCUMENTS: SearchDocument[] = [
   {
     pageTitle: 'Law',
     sectionTitle: 'Law',
-    sectionRoute: '/docs/antitrust/law/test',
+    sectionRoute: '/docs/antitrust/law/overview',
     type: 'docs',
   },
   {

@@ -13,6 +13,14 @@
   --ifm-color-primary-light: #24436d;
   --ifm-color-primary-lighter: #264773;
   --ifm-color-primary-lightest: #2c5285;
+  --antitrust-table-bg: #ffffff;
+  --antitrust-table-border: #e5e7eb;
+  --antitrust-table-header-bg: #dceeff;
+  --antitrust-table-header-color: #152941;
+  --antitrust-table-subheader-bg: #f0f7ff;
+  --antitrust-table-text: var(--ifm-font-color-base);
+  --antitrust-table-sticky-top: var(--ifm-navbar-height);
+  --antitrust-table-sticky-header-height: 0px;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -25,6 +33,12 @@
   --ifm-color-primary-lighter: #a1c8ff;
   --ifm-color-primary-lightest: #dbeaff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --antitrust-table-bg: #1f242d;
+  --antitrust-table-border: rgba(219, 234, 255, 0.18);
+  --antitrust-table-header-bg: #263f5c;
+  --antitrust-table-header-color: #f2f8ff;
+  --antitrust-table-subheader-bg: #213448;
+  --antitrust-table-text: #e6edf7;
 }
 
 .footer {
@@ -141,6 +155,64 @@
 .navbar .inline-search__form {
   --aa-search-input-height: 2.25rem;
   border-radius: 8px;
+}
+
+.markdown table {
+  border-collapse: separate;
+  border-spacing: 0;
+  color: var(--antitrust-table-text);
+  display: table;
+  overflow: visible;
+  width: 100%;
+}
+
+.markdown table th,
+.markdown table td {
+  border-left: 0;
+  border-right: 0;
+  border-color: var(--antitrust-table-border);
+  color: var(--antitrust-table-text);
+}
+
+.markdown table thead tr,
+.markdown table thead th {
+  background-color: var(--antitrust-table-header-bg);
+  color: var(--antitrust-table-header-color);
+}
+
+.markdown table thead th {
+  border-bottom: 1px solid var(--antitrust-table-border);
+  position: sticky;
+  top: var(--antitrust-table-sticky-top);
+  z-index: 4;
+}
+
+.markdown table tbody tr,
+.markdown table tbody tr:nth-child(2n) {
+  background-color: var(--antitrust-table-bg);
+}
+
+.markdown table tbody td {
+  background-color: var(--antitrust-table-bg);
+}
+
+.markdown table tbody tr td {
+  border-bottom: 1px solid var(--antitrust-table-border);
+}
+
+.markdown table tbody tr:has(> td[colspan]) {
+  background-color: var(--antitrust-table-subheader-bg);
+}
+
+.markdown table tbody tr > td[colspan] {
+  background-color: var(--antitrust-table-subheader-bg);
+  position: sticky;
+  text-align: left;
+  top: calc(
+    var(--antitrust-table-sticky-top) +
+      var(--antitrust-table-sticky-header-height) - 1px
+  );
+  z-index: 3;
 }
 
 @media screen and (max-width: 996px) {

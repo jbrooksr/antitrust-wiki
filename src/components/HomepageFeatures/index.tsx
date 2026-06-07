@@ -12,7 +12,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Law',
-    href: '/docs/antitrust/law/test',
+    href: '/docs/antitrust/law/overview',
     Icon: ScalesIcon,
   },
   {
