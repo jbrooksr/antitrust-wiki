@@ -218,7 +218,26 @@
     var(--antitrust-table-sticky-top) +
       var(--antitrust-table-sticky-header-height) - 1px
   );
+  overflow: visible;
   z-index: 3;
+}
+
+.markdown table tbody tr > td[colspan]::before {
+  background-color: var(--antitrust-table-subheader-bg);
+  border-bottom: 1px solid var(--antitrust-table-border);
+  content: '';
+  height: var(--antitrust-table-sticky-subheader-height);
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.markdown table tbody tr > td[colspan] > * {
+  position: relative;
+  z-index: 1;
 }
 
 @media screen and (max-width: 996px) {
@@ -256,7 +275,4 @@
     width: max-content;
   }
 
-  .markdown table tbody tr > td[colspan] {
-    height: var(--antitrust-table-sticky-subheader-height);
-  }
 }
