@@ -217,6 +217,7 @@
     var(--antitrust-table-sticky-top) +
       var(--antitrust-table-sticky-header-height) - 1px
   );
+  transform: translateY(var(--antitrust-table-subheader-offset, 0px));
   z-index: 3;
 }
 

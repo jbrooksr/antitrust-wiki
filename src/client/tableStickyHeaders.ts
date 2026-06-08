@@ -9,14 +9,10 @@ function getTableScrollWidth() {
   return Math.max(window.innerWidth, ...tableWidths);
 }
 
-function getPixelValue(value: string) {
-  return Number.parseFloat(value) || 0;
-}
-
 function getStickyTop() {
-  const styles = getComputedStyle(document.documentElement);
+  const navbar = document.querySelector<HTMLElement>('.navbar');
 
-  return getPixelValue(styles.getPropertyValue('--ifm-navbar-height'));
+  return navbar?.getBoundingClientRect().height ?? 0;
 }
 
 function getActiveSubheader(subheaders: HTMLTableCellElement[], subheaderTop: number) {
@@ -45,6 +41,7 @@ function updateStickySubheaders() {
           'antitrust-table-subheader-active',
           'antitrust-table-subheader-past',
         );
+        subheader.style.removeProperty('--antitrust-table-subheader-offset');
       });
     };
 
@@ -70,6 +67,12 @@ function updateStickySubheaders() {
     }
 
     const activeIndex = subheaders.indexOf(activeSubheader);
+    const nextSubheader = subheaders[activeIndex + 1];
+    const activeHeight = activeSubheader.getBoundingClientRect().height;
+    const nextTop = nextSubheader?.getBoundingClientRect().top;
+    const overlap = nextTop !== undefined
+      ? Math.max(0, Math.min(activeHeight, subheaderTop + activeHeight - nextTop))
+      : 0;
 
     subheaders.forEach((subheader, index) => {
       const isActive = subheader === activeSubheader;
@@ -77,6 +80,15 @@ function updateStickySubheaders() {
 
       subheader.classList.toggle('antitrust-table-subheader-active', isActive);
       subheader.classList.toggle('antitrust-table-subheader-past', isPast);
+
+      if (isActive) {
+        subheader.style.setProperty(
+          '--antitrust-table-subheader-offset',
+          `${overlap * -1}px`,
+        );
+      } else {
+        subheader.style.removeProperty('--antitrust-table-subheader-offset');
+      }
     });
   });
 }
@@ -139,6 +151,9 @@ function setupTableStickyHeaders() {
         subheader.classList.remove(
           'antitrust-table-subheader-active',
           'antitrust-table-subheader-past',
+        );
+        (subheader as HTMLElement).style.removeProperty(
+          '--antitrust-table-subheader-offset',
         );
       });
   };
