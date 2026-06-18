@@ -63,6 +63,12 @@ const SUGGESTED_DOCUMENTS: SearchDocument[] = [
   },
 ];
 
+const HOME_SEARCH_INDEX_TAGS = [
+  'docs-default-current',
+  'default',
+  'blog_authors_posts',
+];
+
 function normalizeText(value: string): string {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 }
@@ -135,7 +141,7 @@ function dedupeDocuments(documents: SearchDocument[]): SearchDocument[] {
 }
 
 async function fetchDocuments(baseUrl: string, tags: string[]): Promise<SearchDocument[]> {
-  const uniqueTags = [...new Set(tags)];
+  const uniqueTags = [...new Set([...tags, ...HOME_SEARCH_INDEX_TAGS].filter(Boolean))];
   const indexes = await Promise.all(
     uniqueTags.map(async (tag) => {
       try {

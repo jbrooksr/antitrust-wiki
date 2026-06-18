@@ -1,0 +1,19 @@
+---
+title: Anticompetitive Distribution Practices
+---
+
+# Anticompetitive Distribution Practices
+
+This section organizes distribution restraints, beginning with single-brand restraints that regulate how a product moves through the distribution chain.
+
+## Contents
+
+- [Single-brand restraints](./anticompetitive-distribution-practices/single-brand-restraints.md)
+
+## Place in the Framework
+
+Distribution practices often sit between contract design and antitrust restraint. The central question is whether a restraint improves distribution or suppresses competition in a way antitrust law recognizes.
+
+## Working Notes
+
+Use this landing page to collect vertical distribution doctrines and to distinguish within-brand restraints from practices that affect competition across brands.
