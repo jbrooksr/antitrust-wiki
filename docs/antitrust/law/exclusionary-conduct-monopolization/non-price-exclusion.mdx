@@ -10,12 +10,12 @@ title: Non-price exclusion
     - Evidence of conduct and effects can inform the question of market power
     - Evidence of market power and anticompetitive effects can inform the question of whether conduct is exclusionary
 
-**Analytical framework for analyzing exclusionary conduct under integrated appraoch from *Aspen Skiing*:
+**Analytical framework for analyzing exclusionary conduct under integrated appraoch from *Aspen Skiing*:**
 1. Consider impact on consumers and whether conduct has impaired competition in an "unnecessarily restrictive way"
 2. If a firm has been "attempting to exclude rivals on some basis other than efficiency," it is fair to characterize its behavior as predatory
 3. Consider D's procompetitive of efficiency (business) justifications
 
-**Test for anticompetitive conduct (nice formulation from *Microsoft*):
+**Test for anticompetitive conduct (nice formulation from *Microsoft*):**
 1. P must make a prima facie showing of conduct having anticompetitive effect (rather than intent)
 2. D must offer procompetitive justification
 3. If D is successful, then P must demonstrate that anticompetitive harm outweighs procompetitive benefits
@@ -44,7 +44,7 @@ title: Non-price exclusion
     - D offers 6-day, 3-area pass and discontinues 3-day, 3-area pass while P offers 3-day pass at Highlands and 3 vouchers for use at D's facilities
     - D refuses to sell P lift tickets and refuses to accept vouchers, although D eventually accepts P's traveler's checks and money orders
     - P's market share declines steadily, alleges Section 2 monopolization
-- **Notes:
+- **Notes:**
     - Important: *Trinko* limits duty to deal in *Aspen* to its facts and situations where a firm (1) gains market power, (2) breaks from past practice, and (3) sacrifices present profits
     - Know how to argue from perspective of d
         - Broader market definition: Market should be expanded to include all places people travel to ski
@@ -54,3 +54,50 @@ title: Non-price exclusion
         - National campaign for 3-area, 6-day ticket was procompetitive: if there was coordination, there wouldn't be the same incentive to advertise nationally
             - Helps further justify "lowball" fixed share offer: D is bringing business to Aspen and growing the pie, P is not.
     - Not an argument from D: the mountains are complements - we want collaboration between producers of complements
+
+### *U.S. v. Microsoft* (2001) (monopolization broth)
+- **Holding:**
+    - <u>Market power in the product and geographic market:</u>
+        - Worldwide market for Intel compatible PC operating systems (MS had 95% share)
+        - Excluded products:
+            - Mac OS: must by a $1k computer to access the OS, too expensive to be a substitute
+                - For Mac OS, you decide on an OS then buy a computer; for Windows, you decide on a computer and buy an OS, different process
+            - OS's for non-PC devices (handheld computers, etc.): not reasonable substitute for OS on desktop computer
+            - Middleware (Netscape Navigator, Java): browsers/java aren't what consumers buy instead of Windows when purchasing a computer
+                - D response: the whole theory of the case is that MS was trying to harm these competitors
+                - Court: these competitors are nascent threats, excluding them in an unreasonable way is still a violation of antitrust law 
+        - D: competition in Silicon Valley is a sequence of winner take all contests. Shares don't indicate whether competition is happening, direct effects are necessary to show here (and there aren't any)
+            - Court: the share is sticky and indicative of substantial market power (barriers to entry, network effects, large fixed cost with low marginal cost, sunk costs), ineffective OS has no value despite large investments, customer switching costs
+    - <u>Theory of harm:</u> Windows is a platform that connects software to users (like *Lorain*)
+        - Software developers use APIs to write software for Windows users, Netscape threatens to capture developers from Microsoft and the money they bring by exposing its own APIs that lets developers write software for the browser
+        - Microsoft wants to exclude Netscape from the market and promote Internet Explorer (IE)
+    - <u>Anticompetitive conduct test:</u>
+        - P makes a prima facie showing of conduct having an anticompetitive effect: none of these actions make much sense unless Microsoft is trying to protect its market share
+            - License restrictions on Original Equipment Manufacturers (OEMs): Microsoft demanded that OEMs remove desktop icons and alter the initial boot sequence
+            - Integrating IE and Windows: exclude IE from add/remove utility, override user's choice of default browser, combine browser and other code in same file 
+            - Agreements with internet access providers: give IE to IAPs for free, exclusive contracts where IAPs could only promote IE
+            - Deals with Apple and Intel: threaten to stop development of Office for Mac unless IE promoted over all other browsers; threatens to support non-Intel microprocessors if Intel continues developing cross-platform JVM
+            - Java: Microsoft makes its own JVM, deals with independent software vendors to make its JVM the default, misleads developers to think that code written for Microsoft's JVM will work on other machines
+- **Facts:** P makes 4 claims, we focus on #3: monopolization of PC OS market under section 2
+    - Windows sells OS to consumers, provides API to enable software developers to make applications for Windows systems 
+- **Notes:** D could have made the argument that there is competition for the main browser spot on each computer, their efforts are just an attempt to secure that main spot 
+    - Adding additional browsers to the system will hurt computer performance
+    - Customers could be confused by browser options
+
+### *U.S. v. Google* (2024) (still being litigated, reviewed district court decision)
+- **Holding:**
+    - Court reviews the relevant product market
+    - Section 2 analysis: 2 markets (search advertisers and consumers), Google has market power in both 
+        - Consumers: general search services
+            - Competitors: Google, Bing, Yahoo, DuckDuckGo
+            - Product: general search (not all web queries, just those that originate from a general search site; excludes Amazon)
+                - Identified using the Cellophane approach to reasonable substitutes
+            - Reasoning: using ads as a proxy for price, Google shows tons of ads to consumers without considering whether they might leave for a competitor
+        - Advertisers: general search text ads market
+            - General market: advertiser pays Google for hyperlink ads in search results (advertisers must choose a search engine to advertise on)
+            - Reasoning: measure whether Google has control over prices directly using ad auction data
+        - Exclusionary conduct: other search engines excluded by Google's arrangements
+            - Note: this is vulnerable on appeal, Google can argue there is competition for defaults, paying for the first look like CPG firms pay for store shelf space
+- **Facts:** Google allegedly used its dominance in the search market to exclude rivals
+    - E.g., contracts with Apple to be the default search engine on all devices for $20B
+- **Notes:** major concern about Google's dominance is that it controls the information ecosystem of our world, which is an enormous power over prices and information that people get

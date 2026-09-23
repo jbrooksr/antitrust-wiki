@@ -22,6 +22,8 @@
   --antitrust-table-sticky-top: var(--ifm-navbar-height);
   --antitrust-table-sticky-header-height: 0px;
   --antitrust-page-scroll-width: 100%;
+  --antitrust-navbar-active-color: #0f2f57;
+  --antitrust-navbar-active-accent: #2c5285;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -40,6 +42,8 @@
   --antitrust-table-header-color: #f2f8ff;
   --antitrust-table-subheader-bg: #213448;
   --antitrust-table-text: #e6edf7;
+  --antitrust-navbar-active-color: #dbeaff;
+  --antitrust-navbar-active-accent: #8dbdff;
 }
 
 .footer {
@@ -49,6 +53,26 @@
 
 .navbar .dsla-search-wrapper {
   width: 22rem;
+}
+
+.navbar__link {
+  position: relative;
+}
+
+.navbar__link--active {
+  color: var(--antitrust-navbar-active-color);
+  font-weight: 700;
+}
+
+.navbar__link--active::after {
+  background: var(--antitrust-navbar-active-accent);
+  border-radius: 999px;
+  bottom: 0.32rem;
+  content: '';
+  height: 2px;
+  left: 0.75rem;
+  position: absolute;
+  right: 0.75rem;
 }
 
 .inline-search {

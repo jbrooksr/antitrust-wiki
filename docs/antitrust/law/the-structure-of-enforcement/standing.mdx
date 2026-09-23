@@ -4,22 +4,88 @@ title: Standing
 
 # Standing
 
-## Contents
+**Standing:** counterparty that directly bore the increase in price can sue (even if they passed on the increase in price to the end customer) - prioritized the privity of contract
 
-- [Place in the Framework](#place-in-the-framework)
-- [Core Questions](#core-questions)
-- [Working Notes](#working-notes)
+5-factor test for standing (*AGC*)
 
-## Place in the Framework
+    - (1) Causal connection and intent
+    - (2) Nature of injury including whether P is consumer or competitor
+    - (3) Directness of injury and speculative nature of damages
+    - (4) Potential for duplicative recovery and complexity of apportionment
+    - (5) Existence of more direct victims
+### Policy:
+Preserve incentives: spreading the ability to sue across multiple parties would diminish the incentive to sue
 
-Standing determines whether a plaintiff is an appropriate party to bring an antitrust claim.
+Avoid harm to D: duplicative recovery would hurt D; total damages shouldn’t exceed the total harm from the conduct
 
-## Core Questions
+## Caselaw
+*Illinois Brick v. Illinois, U.S.* (1977)
 
-- Is the plaintiff a proper enforcer of the antitrust laws?
-- Is the injury direct or derivative?
-- Would recognizing standing create duplicative recovery or complex apportionment problems?
+- **Holding:** Indirect purchasers may not assert a claim for damages under the Clayton Act
+    - Only general contractor is allowed to sue, but they can’t be forced to sue: general contractor may have business relations with masonry contractors that they don’t want to disrupt
+    - Reasons why indirect purchaser cannot sue:
+        - No defensive passover: D (usually) cannot avoid liability by demonstrating that the P was not injured because the P passed on an illegal overcharge (*Hanover Shoe*)
+            - For sake of symmetry, no offensive passover either: don’t let P sue on the basis that D raised prices higher up the chain that were passed on to P as an indirect purchaser
+        - Complexity of tracing the effects of overcharge: it is difficult to tell how much of the higher price the subcontractor charged the contractor was passed to the state by the contractor
+        - Concern with diluting incentives to sue: if court allows too many parties to sue, damages will need to be split between plaintiffs, so the incentive for any given P will decrease
+            - If potential Ps are less likely to bring suit, the deterrent effect of the antitrust laws will decrease
 
-## Working Notes
+**Facts:** P (IL) alleges price fixing conspiracy by D concrete manufacturers (ultimately subcontractors in this context). D sold concrete to masonry contractors who submit bids to general contractors who submit bids to customers (P).
 
-Add notes here on antitrust standing factors, direct purchaser rules, indirect purchaser limits, and efficient-enforcer analysis.
+**Prof. Note:** after *Illinois Brick*:
+
+    - *Illinois Brick* exceptions:
+        - Cost plus contract: if the amount of pass through is stated in the contract (general contractor tells the state how much they buy and sell the cement for), then there is no basis to sue
+        - Conspiracy exception (direct purchaser)
+        - Injunctive remedies
+    - Many states have adopted statutes allowing recovery by indirect purchasers under state antitrust law
+    - This area of law is a mess: Federal price fixing prosecutions often gives rise to multiple private state and federal claims
+    - Class Action Fairness Act (2004) has facilitated removal, transfer, and consolidation of state indirect purchaser actions to federal court
+
+*Apple v. Pepper* (U.S. 2019) (application of *Illinois Brick*)
+
+- **Holding:** consumer has standing to sue Apple (more friendly to standing)
+    - This is a platform market:
+        - Apple offers the hardware, operating system, and store
+        - Developers make apps and sell them on the store
+        - Consumers buy apps from the store
+    - Consumers purchase from (and are in contract with) Apple and are therefore direct purchasers under *Illinois Brick*
+    - Where there is any ambiguity under *Illinois Brick* it should be resolved in the direction of statutory text (Clayton Act Section 4) and allow recovery
+        - The statute is very broad: “any person” who is injured may sue, suggests consumer should be provided a remedy
+    - Consumer standing does not preclude app developer standing
+    - Apple’s “who set the price” rule would create legal distinctions among supplier/distributor arrangements that are economically identical and provide strategic opportunities to avoid suit
+        - Regardless of who sets the price, if the revenue split is the same, then the benefits for Apple and the developer are the same.
+    - Distinction from *Illinois Brick*: Apple is in contract with both the app developers and the consumer, whereas in *Illinois Brick* the state is only in contract with the general contractor, not the cement contractor
+        - To be fully analogous with *Illinois Brick*, Apple would have to not be in contract with consumer, which isn’t the case here
+- **Dissent:** consumer does not have standing to sue Apple (less friendly to standing)
+    - Court has a precedent that applies on these facts, so it should use it
+    - Case falls squarely within *Illinois Brick* in terms of law and policy: app developers set the price, Apple merely passed on the price to consumers
+        - Illinois forbids offensive passover
+        - Would require precisely the kind of pass-on tracing and risk of duplicative recovery that *Illinois Brick* forbids
+    - Apple allegedly overcharged app developers who may or may not have passed the overcharge onto consumers
+    - Rule that only developers can seek damages avoids complicated apportionment and duplicative awards
+    - Majority elevates form (contractual privity) over substance
+- **Facts:** Apple charges app developers a $99 annual fee and 30% of the price of an app. Consumers may only purchase apps through iPhone app store. Consumer purchasers of iPhones allege that Apple has monopolized the market for app sales. Apple responds that consumers are not direct purchasers of (app store access) under *Illinois Brick*, so they have no standing to sue.
+- **Prof. Note:**
+    - In reality, a lot of Apple’s contracts include limitations imposed on application developers that force pricing
+    - Other ways the court could have distinguished *Illinois Brick* besides privity:
+        - (1) Apple excluding app developers: exclusion occurs through price overcharge, some developers excluded from the market because they can’t afford the overcharge
+        - (2) Apple provides a platform market, not the case in *Illinois Brick*: Apple intermediates between the app developer and the consumer (narrow)
+        - (3) This situation is analogous to *Amex*: the App Store is a transaction platform market, so suit should be allowed (narrower)
+    - Clash of formalistic rules, each side accuses the other of applying a rule that is too manipulable:
+        - Majority: Apple shouldn’t be able to insulate themselves from class actions by saying app developers set prices (arbitrary)
+            - Prof. support: contractural privity has legal consequences that arbitrary distinctions between who sets a price doesn’t have (see also the case of joint ventures) – contracts are also recognized in other parts of contract law (like the CCC requirement under S1), which suggests this construction is coherent
+        - Dissent: Apple can avoid making a contract with the customer (and avoid liability) by forcing the app developer to enter a contract with the customer directly
+            - Prof. critique: customer will be in contract with Apple no matter what because they purchased their phone, this is not very manipulable
+    - Zooming out: even if P had standing, they don’t have a case, you can’t sue for high prices
+        - At best, sue for unilateral action under S2 and a refusal to deal theory, which is very narrow under *Aspen Skiing*
+        - Remedy would be to classify the app store as an essential facility that is necessary to compete in the app market (and demands that D set reasonable prices), but P is very unlikely to win this case
+### *Associated General Contractors of CA v. CA State Council of Carpenters, U.S.* (1983) (established test for antitrust standing)- **Holding:** P union cannot recover damages where D general contractors conspired to limit contracts awarded to unionized subcontractors
+    - Unionized subcontractors (not the union) were harmed by the agreement.
+    - Provides a 5-factor test for standing:
+        - (1) Causal connection and intent (P): D’s intent and effect of the agreement was to harm the union by harming the union’s members
+        - (2) Nature of injury including whether P is consumer or competitor (D): direct injury was sustained by D’s competitors and customers, not the union.
+        - (3) Directness of injury and speculative nature of damages (D): union was not the one directly injured
+        - (4) Potential for duplicative recovery and complexity of apportionment (D): regardless, the unionized subcontractors can also sue, the damages would need to be apportioned between the unionized subcontractors and the union if the union sued and won
+        - (5) Existence of more direct victims (D): relative to the union, the unionized subcontractors were more directly injured
+- **Facts:** an association of general contractors contracts with businesses. Typically, a general contractor will take bids from all subcontractors. However, general contractors agreed to take bids from some subcontractors, effectively excluding unionized subcontractors from the market. Union (as distinct from the unionized subcontractor) tries to bring suit.

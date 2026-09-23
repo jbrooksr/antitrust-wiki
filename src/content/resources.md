@@ -32,6 +32,7 @@ Audio sources for interviews, enforcement updates, and competition policy discus
 - [Fierce Competition](https://open.spotify.com/show/5O7cIljyx4Agy2A6wt5GZv?si=bb3f21dddb074625): Skadden
 - [Our Curious Amalgam](https://open.spotify.com/show/1XqJvsoB11JTdSXUnI5t8h?si=86121089ea374377): American Bar Association
 - [Slingshot](https://open.spotify.com/show/5V877zUew6QmWYJmf7BN1W?si=db10a56e74964231): The Sling
+- [Rethinking Antitrust](https://rethinking-antitrust.simplecast.com): TechFreedom
 
 ## Books
 
